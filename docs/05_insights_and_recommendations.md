@@ -2,7 +2,7 @@
 
 > **All findings use synthetic data.** Report filter: PO issued in 2026, all buyers and product categories, snapshot **30 September 2026**.
 
-## 1 — Remaining PO commitments
+## 1. Remaining PO commitments
 
 From **NZ$3,293,324** of eligible PO commitments, **NZ$2,740,838** has been received at PO unit prices, leaving **NZ$552,486** open, approximately **16.8%** of committed value.
 
@@ -10,13 +10,13 @@ From **NZ$3,293,324** of eligible PO commitments, **NZ$2,740,838** has been rece
 
 **Action:** Set a weekly purchasing exception review, prioritised by due date and exposure.
 
-## 2 — Category exposure
+## 2. Category exposure
 
 **Power Tools** account for approximately **NZ$171,168** and **Chemicals & Adhesives** approximately **NZ$138,636** in open value. Together they represent around **56%** of total remaining commitment.
 
 **Action:** Review the largest category positions for operational urgency and supplier follow-up. Do not infer actual stock-outs; the dataset has no demand or on-hand inventory records.
 
-## 3 — Supplier exposure
+## 3. Supplier exposure
 
 The largest supplier outstanding positions include:
 
@@ -28,7 +28,7 @@ Combined, these make approximately **63%** of the 2026 open value.
 
 **Action:** Review these supplier positions by open line, deadline and revised ETA rather than treating open value as supplier failure.
 
-## 4 — Completed-line OTIF needs context
+## 4. Completed-line OTIF needs context
 
 **88.0%** completed-line OTIF is calculated only for fully received lines; **19** open lines are overdue and the overall completion rate is **80.1%**.
 
