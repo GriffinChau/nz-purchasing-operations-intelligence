@@ -1,4 +1,4 @@
-# Business story — Purchasing decisions
+# Business story - Purchasing decisions
 
 > **Independent, fictional scenario:** Kauri Industrial Distribution NZ. All transactions and entities are synthetic.
 
