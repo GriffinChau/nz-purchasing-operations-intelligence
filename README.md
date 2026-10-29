@@ -4,7 +4,7 @@
 
 ![Project overview — illustrative summary of 2026 workbook results](assets/project-overview.svg)
 
-> **Portfolio disclosure:** This is an **independent, simulated project**. All company, buyer, supplier, product, price, purchase order and receipt data are synthetic. The fictional business is **Kauri Industrial Distribution NZ**. This project is **not affiliated with, commissioned by, or implemented at Würth New Zealand**, nor does it use Würth's internal information. All monetary amounts are **NZD excluding GST**.
+> **Portfolio disclosure:** This is an **independent, simulated project**. All company, buyer, supplier, product, price, purchase order and receipt data are synthetic. The fictional business is **Kauri Industrial Distribution NZ**. All monetary amounts are **NZD excluding GST**.
 
 **[Business walkthrough](docs/01_business_story.md)** · **[Technical walkthrough](docs/02_technical_implementation.md)** · **[KPI definitions](docs/03_kpi_dictionary.md)** · **[QA & limitations](docs/04_validation_and_limitations.md)**
 
