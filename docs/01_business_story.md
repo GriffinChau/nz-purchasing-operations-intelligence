@@ -1,6 +1,6 @@
 # Business story — Purchasing decisions
 
-> **Independent, fictional scenario:** Kauri Industrial Distribution NZ. All transactions and entities are synthetic, not Würth NZ records.
+> **Independent, fictional scenario:** Kauri Industrial Distribution NZ. All transactions and entities are synthetic.
 
 ## Why this project exists
 
