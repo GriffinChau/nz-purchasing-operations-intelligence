@@ -2,13 +2,12 @@
 
 ## Data origin
 
-All suppliers, buyers, products, PO prices, order lines, warehouses, receipt dates and business figures were **synthetically generated** for the fictional organisation **Kauri Industrial Distribution NZ**. No Würth or other company's private transaction data was used.
+All suppliers, buyers, products, PO prices, order lines, warehouses, receipt dates and business figures were **synthetically generated** for the fictional organisation **Kauri Industrial Distribution NZ**.
 
 ## Professional references
 
 The workbook's `SOURCES` sheet includes public references used to shape plausible purchasing terminology and KPI choices. These are **inspiration for domain framing**, not the provenance of individual PO records.
 
-- [Würth NZ product categories](https://eshop.wurth.co.nz/Product-categories/3120.cyid/3120.cgid/en/GB/NZD/) — examples of industrial product groups, not data.
 - [SAP supplier evaluation guidance](https://learning.sap.com/courses/purchasing-in-sap-s-4hana/evaluating-suppliers-using-logistics-information-system) — purchasing and vendor analysis terminology.
 - [SAP Help](https://help.sap.com/) — references for receipt/delivery-date logic.
 - [Microsoft procurement analysis sample](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-procurement) — general procurement reporting examples; this project does **not** use Power BI.
