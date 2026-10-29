@@ -18,10 +18,6 @@
 5. Verify denominator rules in `KPI_DICTIONARY`.
 6. Review `DATA_QA` PASS statuses and discuss the limits of simulated validation.
 
-## Interview narrative
-
-> I built an Excel-based purchasing decision-support prototype for a fictional New Zealand industrial distributor. It reconciles purchase-order commitments against partial goods receipts to surface overdue follow-ups, outstanding value and supplier performance indicators. I maintained separate PO-line and receipt-event grains to prevent inflated aggregates, documented KPI scope — including completed-line OTIF — and added formula-based data quality controls. The results are illustrative because all transaction data is synthetic.
-
 ## What was not built
 
 There is no production ERP pipeline, SAP connection, Power BI dashboard or measured commercial improvement. This is a standalone Excel analytics portfolio project.
