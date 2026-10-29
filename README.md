@@ -10,7 +10,25 @@
 
 ## Workbook and screenshots
 
-> **Upload note:** The GitHub integration can publish text files but does not support transferring the local `.xlsx` and `.png` files from this chat. The source workbook and screenshots are included in the portfolio ZIP provided in ChatGPT; upload them to `workbook/` and `assets/` respectively before using the repository as a final public portfolio. Until then, this repository contains the accompanying documentation.
+**Explore the finished Excel purchasing dashboard and review the operational follow-up views.**
+
+| File | What you will find |
+|---|---|
+| 📊 **[Download the Excel dashboard](assets/NZ_Purchasing_Operations_Intelligence_Portfolio.xlsx)** | The complete formatted workbook with dashboard, purchasing calculations, supplier scorecard, follow-up worklist and data-quality checks |
+| 🧾 **[View supplier scorecard](assets/Purchasing_Supplier_Scorecard.png)** | Supplier outstanding positions, delivery performance and areas for investigation |
+| 📋 **[View buyer follow-up queue](assets/Purchasing_Follow_Up.png)** | Purchasing exceptions and PO lines requiring follow-up |
+
+> **How to use:** On the Excel file page, click **Download raw file**. Open the `.xlsx` in desktop Microsoft Excel to use its charts, dropdown filters and formulas. GitHub cannot display the interactive Excel dashboard directly.
+
+### Supplier performance scorecard
+
+![Supplier performance scorecard from the synthetic Excel dashboard](assets/Purchasing_Supplier_Scorecard.png)
+
+### Purchasing follow-up queue
+
+![Buyer follow-up queue from the synthetic Excel dashboard](assets/Purchasing_Follow_Up.png)
+
+These screenshots and the workbook show a **synthetic purchasing scenario**, not real supplier or operational results.
 
 ## The business problem
 
@@ -57,15 +75,7 @@ This suggests a focused review of exposure concentration, not a conclusion that 
 
 ## See the product
 
-**Supplier scorecard — exposed value and delivery performance**
-
-*Supplier scorecard: available in the Excel workbook in the [downloadable portfolio package](#workbook-and-screenshots).*
-
-**Buyer follow-up queue — worklist for overdue PO lines**
-
-*Buyer follow-up queue: available in the Excel workbook in the [downloadable portfolio package](#workbook-and-screenshots).*
-
-*Images are captured from the supplied Excel workbook. Open the `.xlsx` in desktop Excel for the full formatted dashboard, charts, tables and filters.*
+Review the **[complete Excel workbook](assets/NZ_Purchasing_Operations_Intelligence_Portfolio.xlsx)** or jump to the **[supplier scorecard](assets/Purchasing_Supplier_Scorecard.png)** and **[buyer follow-up queue](assets/Purchasing_Follow_Up.png)** above. The screenshots are static previews; the `.xlsx` contains the formula-based views and interactive filters.
 
 ## For non-technical readers
 
@@ -88,7 +98,7 @@ flowchart LR
 
 ## Open and use the workbook
 
-1. Download the Excel workbook from the portfolio package and open it in **Microsoft Excel** (desktop recommended).
+1. **[Download the Excel workbook](assets/NZ_Purchasing_Operations_Intelligence_Portfolio.xlsx)** from this repository and open it in **Microsoft Excel** (desktop recommended).
 2. On `DASHBOARD`, change the **PO issue year**, **Purchasing Buyer** and **Product Category** drop-down cells (B5, F5, J5). The report uses a fixed **30 Sep 2026** snapshot; it is **not live data**.
 3. Review `FOLLOW_UP_QUEUE` separately: it covers **all PO issue years** and has its **own** Excel table filters. It is not controlled by the dashboard's 2026 filter.
 4. Compare `SUPPLIER_SCORECARD` with `KPI_DICTIONARY`, then open `DATA_QA` to see reconciliation controls.
