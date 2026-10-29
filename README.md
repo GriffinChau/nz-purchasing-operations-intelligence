@@ -18,8 +18,6 @@
 | 🧾 **[View supplier scorecard](assets/Purchasing_Supplier_Scorecard.png)** | Supplier outstanding positions, delivery performance and areas for investigation |
 | 📋 **[View buyer follow-up queue](assets/Purchasing_Follow_Up.png)** | Purchasing exceptions and PO lines requiring follow-up |
 
-> **How to use:** On the Excel file page, click **Download raw file**. Open the `.xlsx` in desktop Microsoft Excel to use its charts, dropdown filters and formulas. GitHub cannot display the interactive Excel dashboard directly.
-
 ### Supplier performance scorecard
 
 ![Supplier performance scorecard from the synthetic Excel dashboard](assets/Purchasing_Supplier_Scorecard.png)
