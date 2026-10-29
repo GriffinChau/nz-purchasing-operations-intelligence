@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460">
+<rect width="1200" height="460" rx="24" fill="#101F36"/><rect width="14" height="460" rx="7" fill="#0CA8AC"/>
+<text x="56" y="68" font-family="Arial,sans-serif" font-size="20" fill="#6CE0DE">EXCEL | NZ PURCHASING INTELLIGENCE</text>
+<text x="56" y="126" font-family="Arial,sans-serif" font-size="41" font-weight="bold" fill="white">From purchase orders to</text><text x="56" y="174" font-family="Arial,sans-serif" font-size="41" font-weight="bold" fill="white">supplier follow-up decisions</text>
+<text x="56" y="212" font-family="Arial,sans-serif" font-size="19" fill="#B9C9DA">Fictional industrial distributor | 2026 PO cohort | As of 30 Sep 2026</text>
+<g font-family="Arial,sans-serif">
+<rect x="54" y="252" width="262" height="136" rx="14" fill="#21354E"/><text x="76" y="289" fill="#BCD2E6" font-size="17">PO Commitments</text><text x="76" y="345" fill="white" font-size="35" font-weight="bold">NZ$3.29m</text>
+<rect x="328" y="252" width="262" height="136" rx="14" fill="#21354E"/><text x="350" y="289" fill="#BCD2E6" font-size="17">Open PO Value</text><text x="350" y="345" fill="white" font-size="35" font-weight="bold">NZ$552k</text>
+<rect x="602" y="252" width="262" height="136" rx="14" fill="#21354E"/><text x="624" y="289" fill="#BCD2E6" font-size="17">Overdue Open Lines</text><text x="624" y="345" fill="white" font-size="35" font-weight="bold">19</text>
+<rect x="876" y="252" width="266" height="136" rx="14" fill="#21354E"/><text x="898" y="289" fill="#BCD2E6" font-size="17">Completed-line OTIF</text><text x="898" y="345" fill="white" font-size="35" font-weight="bold">88.0%</text></g>
+<text x="56" y="432" font-family="Arial,sans-serif" font-size="14" fill="#90A7BE">Portfolio illustration derived from synthetic workbook values; not an Excel screenshot.</text>
+</svg>
