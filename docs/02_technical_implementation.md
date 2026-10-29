@@ -1,4 +1,4 @@
-# Technical implementation — Excel-only BI
+# Technical implementation
 
 ## Architecture and grain
 
