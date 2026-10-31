@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="390" viewBox="0 0 1100 390" role="img" aria-label="2026 purchasing commitments divided between received and open PO value"><title>2026 purchasing commitments divided between received and open PO value</title>
+<rect x="0" y="0" width="1100" height="390" rx="22" fill="#F7FAFD"/>
+<rect x="34" y="36" width="8" height="57" rx="4" fill="#0F9A95"/>
+<text x="58" y="55" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#0E817F" >PURCHASING VALUE FLOW</text>
+<text x="58" y="95" font-family="Arial,Helvetica,sans-serif" font-size="34" font-weight="700" fill="#172C44" >Received vs outstanding PO value</text>
+<text x="58" y="128" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#52677A" >2026 PO issue cohort | As at 30 Sep 2026 | NZD excl. GST</text>
+<rect x="58" y="170" width="984" height="72" rx="13" fill="#E8EFF6"/>
+<rect x="58" y="170" width="819" height="72" rx="13" fill="#0E958B"/>
+<rect x="865" y="170" width="12" height="72" rx="0" fill="#0E958B"/>
+<rect x="877" y="170" width="165" height="72" rx="0" fill="#E4A442"/>
+<text x="80" y="204" font-family="Arial,Helvetica,sans-serif" font-size="23" font-weight="700" fill="#FFFFFF" >83.2% received</text>
+<text x="80" y="229" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="400" fill="#EEFFFD" >NZ$2,740,838</text>
+<text x="893" y="204" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" fill="#172C44" >16.8% open</text>
+<text x="893" y="230" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="400" fill="#172C44" >NZ$552,486</text>
+<text x="58" y="284" font-family="Arial,Helvetica,sans-serif" font-size="25" font-weight="700" fill="#172C44" >Total PO commitments: NZ$3,293,324</text>
+<text x="58" y="327" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="400" fill="#435E73" >Open commitment is not the same as overdue value. Investigate due dates before escalation.</text>
+<text x="58" y="366" font-family="Arial,Helvetica,sans-serif" font-size="15" font-weight="400" fill="#61768B" >Illustrative synthetic dataset | Values reconcile at reported aggregate level</text>
+</svg>
