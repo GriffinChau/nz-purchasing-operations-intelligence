@@ -28,6 +28,12 @@ Combined, these make approximately **63%** of the 2026 open value.
 
 **Action:** Review these supplier positions by open line, deadline and revised ETA rather than treating open value as supplier failure.
 
+### Supplier exposure chart
+
+![Open PO value by supplier with aggregate other suppliers](../assets/2026-supplier-exposure.svg)
+
+**Reading the chart:** The three named suppliers account for about 62.7% of open PO value in the 2026 cohort. "All other suppliers" combines remaining exposure; this aggregation does not imply the named suppliers have poor delivery performance. Follow up on due dates and individual PO lines before escalation.
+
 ## 4. Completed-line OTIF needs context
 
 **88.0%** completed-line OTIF is calculated only for fully received lines; **19** open lines are overdue and the overall completion rate is **80.1%**.
