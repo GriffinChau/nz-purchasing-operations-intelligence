@@ -1,0 +1,10 @@
+metric,value,unit,po_issue_year,as_of_date,scope,source_note
+PO Commitments,3293324,NZD,2026,2026-09-30,Non-cancelled PO lines; all buyers and categories,Workbook dashboard snapshot
+Goods Received Value,2740838,NZD,2026,2026-09-30,Accepted receipts valued at PO prices,Workbook dashboard snapshot
+Open PO Value,552486,NZD,2026,2026-09-30,Undelivered commitment,Workbook dashboard snapshot
+Open PO Value Share,16.78,percent,2026,2026-09-30,Open divided by committed; rounded from published figures,Derived from published snapshot
+Overdue Open PO Lines,19,lines,2026,2026-09-30,Incomplete lines past original due date,Workbook dashboard snapshot
+PO Line Completion Rate,80.1,percent,2026,2026-09-30,Completed eligible lines divided by eligible lines,Workbook dashboard snapshot
+Completed Line OTIF,88.0,percent,2026,2026-09-30,On time and in full among completed eligible lines only,Workbook dashboard snapshot
+Outstanding Units,52057,units,2026,2026-09-30,Across heterogeneous SKUs; not a standardised physical unit,Workbook dashboard snapshot
+Due Next 14 Days,13,lines,2026,2026-09-30,Incomplete lines due within 14 days,Workbook dashboard snapshot
