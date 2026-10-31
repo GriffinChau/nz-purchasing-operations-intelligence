@@ -144,11 +144,10 @@ This repository is deliberately presented as a **readable case study**, without 
 | [KPI definitions](docs/03_kpi_dictionary.md) | Calculations, eligible records, denominators and exclusions |
 | [Validation and limitations](docs/04_validation_and_limitations.md) | Reconciliation checks, interpretive and synthetic-data caveats |
 | [Insights and proposed actions](docs/05_insights_and_recommendations.md) | Management interpretation and action plan |
-| [How to explore](docs/06_how_to_explore.md) | Reviewer walkthrough and interview demo script |
+| [How to explore](docs/06_how_to_explore.md) | Reader walkthrough for business and technical audiences |
 | [Sources and transparency](docs/07_sources_and_provenance.md) | Reference links and what was or was not sourced |
 | [Evidence and reproducibility](docs/08_evidence_and_reproducibility.md) | Reported aggregates, arithmetic checks, methods and verification limits |
 | [Data reliability and ETA controls](docs/09_data_reliability_and_risk_controls.md) | Supplier keys, stale ETAs, long-aged exceptions and controls |
-| [Interview questions and answers](docs/10_interview_questions_and_answers.md) | Honest, specific answers to technical and purchasing-manager objections |
 
 ## Why this project matters
 
