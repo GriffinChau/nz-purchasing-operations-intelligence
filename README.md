@@ -8,25 +8,43 @@
 
 **[Business walkthrough](docs/01_business_story.md)** · **[Technical walkthrough](docs/02_technical_implementation.md)** · **[KPI definitions](docs/03_kpi_dictionary.md)** · **[QA & limitations](docs/04_validation_and_limitations.md)**
 
-## Workbook and screenshots
+## Results at a glance — no Excel download required
 
-**Explore the finished Excel purchasing dashboard and review the operational follow-up views.**
+**Reporting basis:** Purchase orders issued in 2026, all buyers and categories, measured at **30 September 2026**. All amounts are simulated NZD excluding GST.
 
-| File | What you will find |
+| Purchasing KPI | 2026 result | What a manager learns |
+|---|---:|---|
+| Purchase-order commitments | **NZ$3,293,324** | Total eligible ordered value |
+| Received value | **NZ$2,740,838** | Quantity received, valued at PO price |
+| Outstanding PO value | **NZ$552,486** | Undelivered commitment (16.8% of ordered value) |
+| Overdue open PO lines | **19** | Open lines past original due date |
+| PO-line completion rate | **80.1%** | Eligible lines fully received |
+| Completed-line on-time/in-full | **88.0%** | On-time among *completed* lines only |
+
+**A transparent check:** `NZ$3,293,324 − NZ$2,740,838 = NZ$552,486`. See the **[evidence and reproducibility notes](docs/08_evidence_and_reproducibility.md)** for scope, calculation rules, limitations, source counts and all eight recorded data-quality checks. Machine-readable summaries: **[KPI CSV](evidence/2026_kpi_snapshot.csv)** · **[Supplier CSV](evidence/2026_supplier_exposure.csv)** · **[Category CSV](evidence/2026_category_exposure.csv)** · **[QA CSV](evidence/validation_summary.csv)**.
+
+**Decision-oriented interpretation:** Open value is not synonymous with overdue value. Purchasing staff should first identify overdue commitments, then confirm supplier ETAs and internal urgency. OTIF for completed lines must be interpreted alongside open overdue lines.
+
+## Visual walkthrough
+
+**Supplier performance:** Where is outstanding value concentrated, and which supplier relationships deserve a closer review?
+
+![Supplier performance scorecard — synthetic scenario](assets/Purchasing_Supplier_Scorecard.png)
+
+**Purchasing action queue:** Which purchase-order lines need a buyer follow-up?
+
+![Buyer follow-up worklist — synthetic scenario](assets/Purchasing_Follow_Up.png)
+
+## Explore the evidence
+
+| Audience | Start here |
 |---|---|
-| 📊 **[Download the Excel dashboard](assets/NZ_Purchasing_Operations_Intelligence_Portfolio.xlsx)** | The complete formatted workbook with dashboard, purchasing calculations, supplier scorecard, follow-up worklist and data-quality checks |
-| 🧾 **[View supplier scorecard](assets/Purchasing_Supplier_Scorecard.png)** | Supplier outstanding positions, delivery performance and areas for investigation |
-| 📋 **[View buyer follow-up queue](assets/Purchasing_Follow_Up.png)** | Purchasing exceptions and PO lines requiring follow-up |
+| **Recruiter / Purchasing Manager** | [Business story](docs/01_business_story.md), then [business insights](docs/05_insights_and_recommendations.md) |
+| **Technical reviewer** | [Calculation and reconciliation evidence](docs/08_evidence_and_reproducibility.md), then [Excel modelling details](docs/02_technical_implementation.md) |
+| **Data reviewer** | [Aggregated CSV tables](evidence/2026_kpi_snapshot.csv) and [validation log](docs/04_validation_and_limitations.md) |
 
-### Supplier performance scorecard
+**Optional Excel artifact:** [View/download the original Excel prototype](assets/NZ_Purchasing_Operations_Intelligence_Portfolio.xlsx). The main findings and methodology are fully readable on GitHub without opening Excel. The workbook is provided as supplementary material for reviewers who want to inspect formula-bearing sheets, filters and receipt records. **The CSV summaries are aggregate evidence, not an independently reproducible transaction-level audit.**
 
-![Supplier performance scorecard from the synthetic Excel dashboard](assets/Purchasing_Supplier_Scorecard.png)
-
-### Purchasing follow-up queue
-
-![Buyer follow-up queue from the synthetic Excel dashboard](assets/Purchasing_Follow_Up.png)
-
-These screenshots and the workbook show a **synthetic purchasing scenario**, not real supplier or operational results.
 
 ## The business problem
 
@@ -71,17 +89,14 @@ In this simulated 2026 cohort, **Power Tools (NZ$171,168)** and **Chemicals & Ad
 
 This suggests a focused review of exposure concentration, not a conclusion that those suppliers have caused stock-outs or actual financial losses. Confirm the outstanding quantities, revised ETA and operational urgency before taking action. See **[findings and proposed actions](docs/05_insights_and_recommendations.md)**.
 
-## See the product
-
-Review the **[complete Excel workbook](assets/NZ_Purchasing_Operations_Intelligence_Portfolio.xlsx)** or jump to the **[supplier scorecard](assets/Purchasing_Supplier_Scorecard.png)** and **[buyer follow-up queue](assets/Purchasing_Follow_Up.png)** above. The screenshots are static previews; the `.xlsx` contains the formula-based views and interactive filters.
 
 ## For non-technical readers
 
-Start with **[The business story](docs/01_business_story.md)**. It explains the user, the purchasing problem, the decisions and the three things to notice in a monthly management review. Then open the workbook at `DASHBOARD` and `FOLLOW_UP_QUEUE`.
+Start with **[The business story](docs/01_business_story.md)**. It explains the user, the purchasing problem, the decisions and the three things to notice in a monthly management review. The results, evidence tables and proposed decisions are readable directly on this repository; the Excel workbook is optional.
 
 ## For technical readers
 
-Start with **[Technical implementation](docs/02_technical_implementation.md)** to see the one-PO-line-to-many-receipts relationship, grains, calculated fields, filter rules and Excel logic. Continue to **[KPI definitions](docs/03_kpi_dictionary.md)** and **[validation](docs/04_validation_and_limitations.md)**. The workbook retains the formula-bearing sheets and source tables, so the numbers can be inspected.
+Start with **[Technical implementation](docs/02_technical_implementation.md)** to see the one-PO-line-to-many-receipts relationship, grains, calculated fields, filter rules and Excel logic. Continue to **[KPI definitions](docs/03_kpi_dictionary.md)** and **[validation](docs/04_validation_and_limitations.md)**. The [evidence page](docs/08_evidence_and_reproducibility.md) and static [CSV summaries](evidence/2026_kpi_snapshot.csv) make the reported aggregates inspectable without Excel. The optional workbook contains the underlying synthetic line-level transactions and formulas.
 
 ```mermaid
 flowchart LR
@@ -94,14 +109,10 @@ flowchart LR
     C --> H[Data QA checks]
 ```
 
-## Open and use the workbook
+## Optional Excel prototype
 
-1. **[Download the Excel workbook](assets/NZ_Purchasing_Operations_Intelligence_Portfolio.xlsx)** from this repository and open it in **Microsoft Excel** (desktop recommended).
-2. On `DASHBOARD`, change the **PO issue year**, **Purchasing Buyer** and **Product Category** drop-down cells (B5, F5, J5). The report uses a fixed **30 Sep 2026** snapshot; it is **not live data**.
-3. Review `FOLLOW_UP_QUEUE` separately: it covers **all PO issue years** and has its **own** Excel table filters. It is not controlled by the dashboard's 2026 filter.
-4. Compare `SUPPLIER_SCORECARD` with `KPI_DICTIONARY`, then open `DATA_QA` to see reconciliation controls.
+The Excel workbook is supplementary rather than required for understanding this case study. Review the [static numbers, checks and methods](docs/08_evidence_and_reproducibility.md) first. If desired, [open the workbook](assets/NZ_Purchasing_Operations_Intelligence_Portfolio.xlsx) in desktop Microsoft Excel to inspect formulas, filters and the raw-style synthetic transaction tables.
 
-A step-by-step path for first-time reviewers is in **[How to explore](docs/06_how_to_explore.md)**.
 
 ## Technical scope and honesty
 
@@ -122,6 +133,7 @@ A step-by-step path for first-time reviewers is in **[How to explore](docs/06_ho
 | [Insights and proposed actions](docs/05_insights_and_recommendations.md) | Management interpretation and action plan |
 | [How to explore](docs/06_how_to_explore.md) | Reviewer walkthrough and interview demo script |
 | [Sources and transparency](docs/07_sources_and_provenance.md) | Reference links and what was or was not sourced |
+| [Evidence and reproducibility](docs/08_evidence_and_reproducibility.md) | Reported aggregates, arithmetic checks, methods and verification limits |
 
 ## Why this project matters
 
