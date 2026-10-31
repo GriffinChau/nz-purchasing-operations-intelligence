@@ -7,7 +7,7 @@ This is a **static, no-download-required evidence page** for an **independent, s
 - **Reporting snapshot:** 30 September 2026; not current, live purchasing data.
 - **Main cohort:** Purchase orders **issued in 2026**, all buyers, all categories.
 - **Monetary basis:** NZD excluding GST, valued at PO unit prices (not supplier invoice / cash paid).
-- **Input scenario:** Fictional NZ industrial distributor, 14 suppliers, 95 SKUs, 5 buyers; 2024–2026 dataset with **1,159 PO lines and 1,394 receipt events**.
+- **Input scenario:** Fictional NZ industrial distributor, 14 suppliers, 95 SKUs, 5 buyers; 2024-2026 dataset with **1,159 PO lines and 1,394 receipt events**.
 - **Follow-up worklist:** All issue years, separately filtered from main 2026 dashboard.
 
 ## 2. KPI snapshot evidence
@@ -81,8 +81,8 @@ See the [technical implementation](02_technical_implementation.md) and [KPI dict
 
 Eight checks were recorded as **PASS** in the original workbook's `DATA_QA` tab. They cover unit/value reconciliation, population counts, cancellation exclusions, a time cutoff, sampled allocations and OTIF eligibility. Full list: [validation summary CSV](../evidence/validation_summary.csv).
 
-**Limitations of this evidence:** These are reported outcomes of a synthetic workbook's internal checks, not independently rerun validations against the underlying line-level dataset. A public static summary cannot prove every transaction was correct. For fully reproducible audit-level verification, a de-identified transaction extract or executable reproducibility script plus the corresponding data would be needed.
+**Limitations of this evidence:** These are reported outcomes of a synthetic workbook's internal checks, not independently rerun validations against the underlying line-level dataset. A public static summary cannot prove every transaction was correct. For fully reproducible audit-level verification, a transaction-level synthetic dataset and a runnable verification script would be needed. Those are not published in this repository.
 
 ## 6. What is not claimed
 
-No real company or Würth NZ data; no live ERP/SAP integration; no independently observed procurement cost savings, vendor quality, inventory shortages, delayed customer fulfilment or business impact. The portfolio demonstrates **reporting design, KPI governance, purchasing analysis and decision-support storytelling**, not a deployed production system.
+No data from any real company; no live ERP/SAP integration; no independently observed procurement cost savings, vendor quality, inventory shortages, delayed customer fulfilment or business impact. The portfolio demonstrates **reporting design, KPI governance, purchasing analysis and decision-support storytelling**, not a deployed production system.
