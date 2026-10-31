@@ -56,6 +56,12 @@ This demonstrates consistency among the **reported aggregates**, not independent
 | Chemicals & Adhesives | 138,636 |
 | **Named category subtotal** | **309,804 (56.1% of open value)** |
 
+### Visual summary of category exposure
+
+![2026 open PO value by product category](../assets/2026-category-exposure.svg)
+
+**Interpretation:** Power Tools and Chemicals & Adhesives together represent approximately 56.1% of outstanding value. "All other categories" is an aggregated residual rather than a separate product category.
+
 Remaining values in CSV files are **calculated residuals from rounded headline values**, not supplier/category records extracted individually. Open value alone does not establish poor supplier performance or stockout risk.
 
 ## 4. Calculation design
