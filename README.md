@@ -21,6 +21,12 @@
 | PO-line completion rate | **80.1%** | Eligible lines fully received |
 | Completed-line on-time/in-full | **88.0%** | On-time among *completed* lines only |
 
+### Purchasing value composition
+
+![2026 received vs open PO value](assets/2026-received-vs-open.svg)
+
+**Management takeaway:** 16.8% of eligible PO commitments remained undelivered at the snapshot date. This is *open value*, not necessarily overdue value. Supplier and product breakdowns are available in the [insights](docs/05_insights_and_recommendations.md) and [evidence](docs/08_evidence_and_reproducibility.md) sections.
+
 **A transparent check:** `NZ$3,293,324 − NZ$2,740,838 = NZ$552,486`. See the **[evidence and reproducibility notes](docs/08_evidence_and_reproducibility.md)** for scope, calculation rules, limitations, source counts and all eight recorded data-quality checks. Machine-readable summaries: **[KPI CSV](evidence/2026_kpi_snapshot.csv)** · **[Supplier CSV](evidence/2026_supplier_exposure.csv)** · **[Category CSV](evidence/2026_category_exposure.csv)** · **[QA CSV](evidence/validation_summary.csv)**.
 
 **Decision-oriented interpretation:** Open value is not synonymous with overdue value. Purchasing staff should first identify overdue commitments, then confirm supplier ETAs and internal urgency. OTIF for completed lines must be interpreted alongside open overdue lines.
