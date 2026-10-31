@@ -2,10 +2,6 @@ name: Build public NZ GETS data extracts
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - scripts/get_gets_public_data.py
-      - .github/workflows/refresh-gets-public-data.yml
 
 permissions:
   contents: write
