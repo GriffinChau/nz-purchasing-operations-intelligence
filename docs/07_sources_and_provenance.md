@@ -6,11 +6,11 @@ All suppliers, buyers, products, PO prices, order lines, warehouses, receipt dat
 
 ## Professional references
 
-The workbook's `SOURCES` sheet includes public references used to shape plausible purchasing terminology and KPI choices. These are **inspiration for domain framing**, not the provenance of individual PO records.
+The analytical design uses the following public references to inform purchasing terminology and KPI choices. These are **inspiration for domain framing**, not the provenance of individual PO records.
 
-- [SAP supplier evaluation guidance](https://learning.sap.com/courses/purchasing-in-sap-s-4hana/evaluating-suppliers-using-logistics-information-system) — purchasing and vendor analysis terminology.
-- [SAP Help](https://help.sap.com/) — references for receipt/delivery-date logic.
-- [Microsoft procurement analysis sample](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-procurement) — general procurement reporting examples; this project does **not** use Power BI.
+- [SAP supplier evaluation guidance](https://learning.sap.com/courses/purchasing-in-sap-s-4hana/evaluating-suppliers-using-logistics-information-system) - purchasing and vendor analysis terminology.
+- [SAP Help](https://help.sap.com/) - references for receipt/delivery-date logic.
+- [Microsoft procurement analysis sample](https://learn.microsoft.com/en-us/power-bi/create-reports/sample-procurement) - general procurement reporting examples; this project does **not** use Power BI.
 
 ## Explicit scenario assumptions
 
@@ -23,4 +23,4 @@ The workbook's `SOURCES` sheet includes public references used to shape plausibl
 
 ## Reproducibility
 
-The Excel workbook contains line-level records, receipt journal, master tables, calculated metrics and formula-based QA checks. It is the main inspectable artifact. See [technical documentation](02_technical_implementation.md).
+The original Excel prototype contains transaction-level data and formula-based internal checks but is not publicly distributed. Publicly available evidence consists of [aggregated CSV files](../evidence/2026_kpi_snapshot.csv), [technical documentation](02_technical_implementation.md), and [reported validation results](08_evidence_and_reproducibility.md). These do not enable independent row-level reproduction.
