@@ -1,0 +1,5 @@
+supplier,open_value_nzd_approx,scope,as_of_date,notes
+Euro Industrial Products,130921,2026 issued PO lines,2026-09-30,Approximate aggregate from supplier scorecard
+Continental Abrasives,125102,2026 issued PO lines,2026-09-30,Approximate aggregate from supplier scorecard
+Northern Automotive Parts,90210,2026 issued PO lines,2026-09-30,Approximate aggregate from supplier scorecard
+All Other Suppliers,206253,2026 issued PO lines,2026-09-30,Residual calculated from overall open value and rounded top-three values; not individually itemised
