@@ -1,0 +1,9 @@
+check,recorded_result,interpretation
+PO receipt units reconcile to received PO units,PASS,Internal aggregate reconciliation
+Receipt value reconciles to PO received value,PASS,Valued at PO unit price
+PO line count equals 1159,PASS,Full synthetic dataset across 2024-2026
+Goods receipt count equals 1394,PASS,Full synthetic dataset across 2024-2026
+OTIF successes do not exceed eligible completed lines,PASS,Denominator and eligibility sanity check
+Cancelled PO lines have no active commitments,PASS,Cancellation exclusion check
+No receipts occur after snapshot cut-off,PASS,30 September 2026 cut-off
+Sampled PO line receipt allocations reconcile,PASS,Sampled matching of goods receipts to lines
