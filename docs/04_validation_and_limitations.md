@@ -28,9 +28,10 @@ The workbook inspection found no cached common Excel formula errors. **PASS is i
 - Value reflects PO unit prices, excludes tax, freight, supplier invoices, FX conversion and landed costs.
 - Some older simulated worklist exceptions may need cleanup in a real operational dataset.
 
-## Publication review note
+## Verification boundary
 
-The original user-formatted workbook's `CASE_STUDY!D25` describes approximately 1,900 PO lines / 2,300 receipts from an earlier draft. The current workbook actually contains **1,159 PO lines / 1,394 receipts**. The original workbook formatting and charts are preserved. This documentary mismatch should be corrected in Excel before external recruiting use.
+The workbook used to generate these figures is not published in the repository. Eight recorded `PASS` results describe internal controls, not a third-party audit or independently reproducible transaction-level validation. The public CSV files provide aggregate numerical evidence only.
+
 
 ## Source limitations
 
