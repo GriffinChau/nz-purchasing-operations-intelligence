@@ -21,3 +21,7 @@ The workbook's transaction-level data is **synthetic**, not sourced from a real 
 For reviewers who prefer not to download the file, the main [project README](../README.md) contains KPI results, charts and business interpretation, while [evidence notes](../docs/08_evidence_and_reproducibility.md) provide calculation definitions and data limitations.
 
 > The public case study is complete without opening Excel. The workbook is an optional supporting artifact to demonstrate how the calculations and reporting interface were built.
+
+## Data reliability review
+
+Before interpreting any supplier performance, also read the [source-data risk controls](../docs/09_data_reliability_and_risk_controls.md). The original simulated data have stale ETA exceptions and one long-aged open order; do not silently change those dates or treat synthetic supplier reliability assumptions as measured performance. The public case study does not constitute an EDI integration or a verification of real trading partners.
