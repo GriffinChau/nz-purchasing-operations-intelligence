@@ -17,7 +17,7 @@ Purchasing staff often need to reconcile orders with multiple goods receipts whi
 | Purchasing Coordinator | Identify overdue PO lines, confirm revised ETAs and next steps |
 | Category/Purchasing Lead | Investigate category concentration and upcoming commitments |
 
-## Workbook experience
+## Excel prototype views
 
 - **DASHBOARD:** annual PO commitment, received and open value, completion and completed-line OTIF.
 - **FOLLOW_UP_QUEUE:** PO-line worklist with priority, original due date, overdue days and suggested next action. It covers **all years** and has independent filters.
@@ -41,4 +41,4 @@ Purchasing staff often need to reconcile orders with multiple goods receipts whi
 - Supplier performance is contextualised alongside open and overdue backlog.
 - Data limitations and synthetic assumptions are prominent.
 
-**Outcome:** A functioning Excel purchasing decision-support *prototype*, not a measured improvement implemented in a real purchasing department.
+**Outcome:** An Excel-based purchasing decision-support *prototype*, presented on GitHub using public summary evidence, screenshots and documentation. The transaction-level workbook is not distributed and no measured real-world operational improvements are claimed.
