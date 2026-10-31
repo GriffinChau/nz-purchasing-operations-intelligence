@@ -13,7 +13,7 @@ import re
 import urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
-from html import unescape
+from html.parser import HTMLParser
 from urllib.parse import urljoin
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
@@ -24,20 +24,36 @@ SOURCE_PAGE = "https://www.mbie.govt.nz/cross-government-functions/new-zealand-g
 
 
 def find_official_link(name):
-    """Resolve the file through MBIE's current public download page."""
-    request = urllib.request.Request(SOURCE_PAGE, headers={"User-Agent": "Mozilla/5.0 (NZ public procurement research)"})
+    """Resolve the current CSV file link from the publisher's HTML page."""
+    class Links(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.links, self.href, self.label = [], None, []
+        def handle_starttag(self, tag, attrs):
+            if tag == "a":
+                self.href = dict(attrs).get("href")
+                self.label = []
+        def handle_data(self, text):
+            if self.href is not None:
+                self.label.append(text)
+        def handle_endtag(self, tag):
+            if tag == "a" and self.href is not None:
+                self.links.append((self.href, " ".join(self.label)))
+                self.href, self.label = None, []
+
+    request = urllib.request.Request(SOURCE_PAGE, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(request, timeout=60) as response:
         html = response.read(4_000_000).decode("utf-8", errors="replace")
+    parser = Links()
+    parser.feed(html)
     desired = "gets award notices" if "award" in name.lower() else "gets supplier data"
-    links = re.findall(r'<a\\b[^>]*href=[\\\"\\\']([^\\\"\\\']+)[\\\"\\\'][^>]*>(.*?)</a>', html, re.I | re.S)
-    for href, label in links:
-        cleaned = re.sub(r"<[^>]*>", " ", unescape(label)).lower()
-        if desired in " ".join(cleaned.split()) and "historic" not in cleaned:
-            url = urljoin(SOURCE_PAGE, unescape(href))
-            print("Resolved source page link: " + url, flush=True)
+    for href, label in parser.links:
+        text = " ".join(label.lower().split())
+        if desired in text and "historic" not in text:
+            url = urljoin(SOURCE_PAGE, href)
+            print("Resolved current MBIE CSV: " + url, flush=True)
             return url
-    examples = [(urljoin(SOURCE_PAGE, u), re.sub(r"<[^>]*>", "", t)[:40]) for u,t in links if ".csv" in u.lower()]
-    raise ValueError("Could not resolve public MBIE link for " + desired + ". CSV examples: " + str(examples[:8]))
+    raise ValueError("No CSV link found for " + desired + "; check the publisher's page manually.")
 
 
 RESOLVED_LINKS = {}
