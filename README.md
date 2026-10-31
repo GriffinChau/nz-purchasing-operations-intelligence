@@ -8,7 +8,7 @@
 
 **[Business walkthrough](docs/01_business_story.md)** · **[Technical walkthrough](docs/02_technical_implementation.md)** · **[KPI definitions](docs/03_kpi_dictionary.md)** · **[QA & limitations](docs/04_validation_and_limitations.md)**
 
-## Results at a glance - no Excel download required
+## Results at a glance
 
 **Reporting basis:** Purchase orders issued in 2026, all buyers and categories, measured at **30 September 2026**. All amounts are simulated NZD excluding GST.
 
