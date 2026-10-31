@@ -37,7 +37,7 @@ The project also includes a focused source-data review. In the synthetic dataset
 
 The internal supplier master, PO lines and receipt journal have **zero observed supplier-ID mismatches** in their linked records. This is an **internal consistency check**, not validation of real EDI trading partners, supplier acknowledgements or legal identities. The supplier master's `Reliability_Assumption` is synthetic scenario input, **not a measured reliability KPI**.
 
-**[Data reliability & ETA controls](docs/09_data_reliability_and_risk_controls.md)** · **[Additional audit evidence](evidence/data_reliability_review_2026-09-30.csv)** · **[Interview questions & answers](docs/10_interview_questions_and_answers.md)**
+**[Data reliability & ETA controls](docs/09_data_reliability_and_risk_controls.md)** · **[Additional audit evidence](evidence/data_reliability_review_2026-09-30.csv)**
 
 ## Visual walkthrough
 
