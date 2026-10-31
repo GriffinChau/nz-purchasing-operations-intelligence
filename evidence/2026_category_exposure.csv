@@ -1,0 +1,4 @@
+product_category,open_value_nzd_approx,scope,as_of_date,notes
+Power Tools,171168,2026 issued PO lines,2026-09-30,Approximate category aggregate
+Chemicals & Adhesives,138636,2026 issued PO lines,2026-09-30,Approximate category aggregate
+All Other Categories,242682,2026 issued PO lines,2026-09-30,Residual calculated from overall open value and rounded named category values
