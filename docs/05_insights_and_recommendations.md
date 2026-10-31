@@ -20,9 +20,9 @@ From **NZ$3,293,324** of eligible PO commitments, **NZ$2,740,838** has been rece
 
 The largest supplier outstanding positions include:
 
-- Euro Industrial Products — approximately **NZ$130,921**
-- Continental Abrasives — approximately **NZ$125,102**
-- Northern Automotive Parts — approximately **NZ$90,210**
+- Euro Industrial Products - approximately **NZ$130,921**
+- Continental Abrasives - approximately **NZ$125,102**
+- Northern Automotive Parts - approximately **NZ$90,210**
 
 Combined, these make approximately **63%** of the 2026 open value.
 
