@@ -31,6 +31,14 @@
 
 **Decision-oriented interpretation:** Open value is not synonymous with overdue value. Purchasing staff should first identify overdue commitments, then confirm supplier ETAs and internal urgency. OTIF for completed lines must be interpreted alongside open overdue lines.
 
+### Data reliability and supplier follow-up risks
+
+The project also includes a focused source-data review. In the synthetic dataset, **18 of 59 active open PO lines** have a latest ETA earlier than the **30 September 2026** snapshot; **17 of these** were issued in 2026. One 2025 line remains open **535 days** after its original due date. These are flagged as **exceptions requiring confirmation**, not automatically corrected or presented as actual supplier misconduct.
+
+The internal supplier master, PO lines and receipt journal have **zero observed supplier-ID mismatches** in their linked records. This is an **internal consistency check**, not validation of real EDI trading partners, supplier acknowledgements or legal identities. The supplier master's `Reliability_Assumption` is synthetic scenario input, **not a measured reliability KPI**.
+
+**[Data reliability & ETA controls](docs/09_data_reliability_and_risk_controls.md)** · **[Additional audit evidence](evidence/data_reliability_review_2026-09-30.csv)** · **[Interview questions & answers](docs/10_interview_questions_and_answers.md)**
+
 ## Visual walkthrough
 
 **Supplier performance:** Where is outstanding value concentrated, and which supplier relationships deserve a closer review?
@@ -139,6 +147,8 @@ This repository is deliberately presented as a **readable case study**, without 
 | [How to explore](docs/06_how_to_explore.md) | Reviewer walkthrough and interview demo script |
 | [Sources and transparency](docs/07_sources_and_provenance.md) | Reference links and what was or was not sourced |
 | [Evidence and reproducibility](docs/08_evidence_and_reproducibility.md) | Reported aggregates, arithmetic checks, methods and verification limits |
+| [Data reliability and ETA controls](docs/09_data_reliability_and_risk_controls.md) | Supplier keys, stale ETAs, long-aged exceptions and controls |
+| [Interview questions and answers](docs/10_interview_questions_and_answers.md) | Honest, specific answers to technical and purchasing-manager objections |
 
 ## Why this project matters
 
