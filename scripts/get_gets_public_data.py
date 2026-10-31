@@ -13,6 +13,8 @@ import re
 import urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
+from html import unescape
+from urllib.parse import urljoin
 from decimal import Decimal, InvalidOperation
 from pathlib import Path
 
@@ -21,15 +23,37 @@ FILES = ["GETS-award-notices.csv", "GETS-supplier-data.csv"]
 SOURCE_PAGE = "https://www.mbie.govt.nz/cross-government-functions/new-zealand-government-procurement-and-property/open-data"
 
 
+def find_official_link(name):
+    """Resolve the file through MBIE's current public download page."""
+    request = urllib.request.Request(SOURCE_PAGE, headers={"User-Agent": "Mozilla/5.0 (NZ public procurement research)"})
+    with urllib.request.urlopen(request, timeout=60) as response:
+        html = response.read(4_000_000).decode("utf-8", errors="replace")
+    desired = "gets award notices" if "award" in name.lower() else "gets supplier data"
+    links = re.findall(r'<a\\b[^>]*href=[\\\"\\\']([^\\\"\\\']+)[\\\"\\\'][^>]*>(.*?)</a>', html, re.I | re.S)
+    for href, label in links:
+        cleaned = re.sub(r"<[^>]*>", " ", unescape(label)).lower()
+        if desired in " ".join(cleaned.split()) and "historic" not in cleaned:
+            url = urljoin(SOURCE_PAGE, unescape(href))
+            print("Resolved source page link: " + url, flush=True)
+            return url
+    examples = [(urljoin(SOURCE_PAGE, u), re.sub(r"<[^>]*>", "", t)[:40]) for u,t in links if ".csv" in u.lower()]
+    raise ValueError("Could not resolve public MBIE link for " + desired + ". CSV examples: " + str(examples[:8]))
+
+
+RESOLVED_LINKS = {}
+
+
 def fetch_csv(name, folder):
-    url = BASE + name
-    req = urllib.request.Request(url, headers={"User-Agent": "Public-NZ-Procurement-Research/1.0", "Accept": "text/csv,*/*"})
+    url = find_official_link(name)
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (NZ public procurement research)", "Accept": "text/csv,*/*"})
     with urllib.request.urlopen(req, timeout=120) as response:
         payload = response.read(65_000_001)
+        final_url = response.url
     if len(payload) > 65_000_000 or not payload or payload[:80].lstrip().lower().startswith((b"<html", b"<!doctype")):
-        raise ValueError("Official source returned an empty/HTML/oversized file: " + name)
+        raise ValueError("Official source returned an empty/HTML/oversized file: " + final_url)
     folder.mkdir(parents=True, exist_ok=True)
     (folder / name).write_bytes(payload)
+    RESOLVED_LINKS[name] = final_url
 
 
 def load_csv(path):
@@ -151,7 +175,7 @@ def run(input_dir, output_dir, first_year, last_year):
         "source_page": SOURCE_PAGE, "source_type": "REAL public GETS contract award notices",
         "downloaded_at_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "year_filter": [first_year,last_year],
-        "raw_sources": [{"url": BASE + fn, "sha256": hashlib.sha256((input_dir / fn).read_bytes()).hexdigest(), "rows": len(awards if i == 0 else suppliers)}
+        "raw_sources": [{"url": RESOLVED_LINKS.get(fn, BASE + fn), "sha256": hashlib.sha256((input_dir / fn).read_bytes()).hexdigest(), "rows": len(awards if i == 0 else suppliers)}
                         for i,fn in enumerate(FILES)],
         "unique_award_notices_in_scope": len(included), "notices_with_positive_disclosed_values": value_count,
         "disclosed_value_coverage_pct": round(100 * value_count / len(included), 2) if included else None,
