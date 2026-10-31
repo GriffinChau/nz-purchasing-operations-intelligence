@@ -63,6 +63,10 @@ The dashboard uses `SUMIFS` and `COUNTIFS` over line-level derived fields. User 
 
 Completed-line on-time/in-full evaluates whether the full ordered quantity was received by the original due date, including the last of multiple receipts. The denominator includes completed eligible PO lines only. Therefore, examine overdue *open* lines separately.
 
+## Public reproducibility note
+
+The source Excel workbook is not included in this repository. Technical readers can review the calculation logic and published aggregates, but cannot independently re-run each row-level transaction. The [evidence page](08_evidence_and_reproducibility.md) explains what is and is not verifiable.
+
 ## Operational limitations
 
 No automated data refresh, SAP extraction, foreign-key enforcement, invoice settlement, live ETA, stock-on-hand, supplier defect outcomes or freight/FX-adjusted landed cost is supplied. The PO-price-based receipt value should not be presented as an invoice-paid amount.
