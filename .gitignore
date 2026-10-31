@@ -1,7 +1,0 @@
-~$*.xlsx
-.DS_Store
-Thumbs.db
-__pycache__/
-
-# Official source downloads are large. Publish only reproducible, derived extracts.
-data/gets_raw/
