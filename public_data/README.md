@@ -1,15 +1,13 @@
 # Public procurement data: separate real-data extension
 
-**Status:** An ETL script and source documentation are available. Do not present any output as downloaded and validated until `public_data/gets/source_manifest.json` is present and the run has succeeded.
+**Status as at 31 October 2026:** The ETL script and source documentation are available. Automatic access from GitHub Actions was blocked by the publisher's HTTP 403, so no public-data analysis has completed or been published. Do not present any output as downloaded and validated until `public_data/gets/source_manifest.json` is present and the run has succeeded.
 
 ## Official source and provenance
 
 - **Publisher:** New Zealand Ministry of Business, Innovation and Employment (MBIE)
 - **Dataset:** Government Electronic Tender Service (GETS) award notice and supplier open data
 - **Source page:** https://www.mbie.govt.nz/cross-government-functions/new-zealand-government-procurement-and-property/open-data
-- **Official raw files:**
-  - https://www.mbie.govt.nz/assets/Data-Files/NZGPP-GETS-Open-Data/GETS-award-notices.csv
-  - https://www.mbie.govt.nz/assets/Data-Files/NZGPP-GETS-Open-Data/GETS-supplier-data.csv
+- **Official downloads:** On the MBIE source page, use **GETS award notices [CSV]** and **GETS supplier data [CSV]**. The older fixed `/assets/Data-Files/...` URLs published in some third-party indexes did not work in our test (HTTP 404). The script attempts to discover current download URLs from the publisher's page.
 - **Publisher's reported coverage:** 1 July 2019 through 30 June 2026 (page updated 13 August 2026, quarterly publication).
 - **Data-grain:** One RFx / published contract award notice, linked via RFx ID to zero or more published supplier names.
 
@@ -38,7 +36,7 @@ Successful processing creates:
 | `public_data/gets/agency_summary.csv` | Award-notice counts and sum of disclosed values by publishing agency |
 | `public_data/gets/supplier_summary.csv` | Supplier-name appearances per award notice, **not** supplier spend |
 
-For automated execution, see [the GitHub Actions workflow](../.github/workflows/refresh-gets-public-data.yml), if enabled. A script existing in the repository does **not** prove that the website was fetched successfully. Check the output manifest.
+The optional [GitHub Actions workflow](../.github/workflows/refresh-gets-public-data.yml) runs only when manually initiated and may fail while the official site blocks automated access. To proceed reliably, download official CSV files in a browser and run the local command above. A script existing in the repository does **not** prove that the website was fetched successfully. Check the output manifest.
 
 ## Key business / analytical controls
 
