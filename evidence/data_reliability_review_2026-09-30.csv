@@ -1,0 +1,29 @@
+control,scope,observed_value,unit,classification,explanation
+PO line records,2024-2026,1159,rows,PASS,Count of source PO lines
+Goods receipt events,2024-2026,1394,rows,PASS,Count of accepted goods receipt events
+Unique supplier master IDs,All suppliers,14,IDs,PASS,14 IDs for 14 synthetic supplier records
+Unknown supplier names on PO lines,All PO lines,0,rows,PASS,All PO supplier names resolve to synthetic supplier master
+Supplier ID mismatches from goods receipts to PO supplier master,All receipt events,0,rows,PASS,Receipt supplier IDs match master ID of their PO supplier
+Unknown receipt PO line references,All receipt events,0,rows,PASS,All receipt line IDs resolve to a PO line
+Receipt PO number mismatches,All receipt events,0,rows,PASS,Receipt PO number agrees with linked PO line
+Goods receipt quantity mismatches,All PO lines,0,rows,PASS,Sum of receipt quantities matches accepted PO units
+Receipt before corresponding purchase order date,All receipt events,0,rows,PASS,No recorded receipt precedes PO creation
+Nonpositive ordered quantities,All PO lines,0,rows,PASS,All ordered units strictly positive
+Nonpositive PO unit prices,All PO lines,0,rows,PASS,All unit prices strictly positive
+Open PO lines,All issue years,59,lines,OBSERVATION,Includes both due and not-yet-due orders
+Open PO lines with ETA earlier than snapshot,All issue years,18,lines,ATTENTION,Latest ETA is already in the past for open lines; update required
+Open PO lines with ETA earlier than snapshot,2026 issue cohort,17,lines,ATTENTION,17 of 58 open 2026 PO lines have an ETA in the past
+Open PO lines,2026 issue cohort,58,lines,OBSERVATION,Active incomplete 2026 issue-year cohort
+Overdue open PO lines,2026 issue cohort,19,lines,OBSERVATION,Original due date earlier than snapshot; some have future revised ETA
+Open PO value,2026 issue cohort,552486.16,NZD,RECONCILED,Commitments less goods received at PO prices
+Overdue open PO value,2026 issue cohort,182444.68,NZD,OBSERVATION,Open value for lines past original due date
+Open PO value with stale ETA,2026 issue cohort,156985.32,NZD,ATTENTION,Open value on lines with ETA earlier than snapshot
+Overdue more than 90 days,2026 issue cohort,10,lines,ATTENTION,Long aged outstanding lines require review
+Exception older than one year,All issue years,1,lines,ATTENTION,One 2025 PO line is 535 days past original due date
+Completed PO lines,2026 issue cohort,234,lines,OBSERVATION,Completed eligible noncancelled lines
+Eligible PO lines,2026 issue cohort,292,lines,OBSERVATION,Noncancelled PO lines
+On-time completed PO lines,2026 issue cohort,206,lines,OBSERVATION,Completed lines received in full by original due date
+Completed-line OTIF,2026 issue cohort,88.03,percent,COHORT_METRIC,206 / 234; excludes open incomplete lines
+ERP or EDI trading partner validation,All records,Not available,n/a,NOT_TESTABLE,No external ERP or EDI feed exists in synthetic dataset
+Historical ETA revision audit,All records,Not available,n/a,NOT_TESTABLE,Only original due and latest ETA fields; no timestamped confirmation history
+Reliability assumption verification,14 synthetic suppliers,Not available,n/a,NOT_TESTABLE,Master assumptions are scenario parameters and not observed performance
