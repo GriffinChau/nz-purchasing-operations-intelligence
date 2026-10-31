@@ -1,23 +1,25 @@
-# How to explore this Excel portfolio
+# How to explore the purchasing case study
 
-## Five-minute business walkthrough
+This repository is designed to be understood **without downloading Excel**. It describes an independently developed synthetic purchasing analytics scenario and documents its calculations, data checks and limitations.
 
-1. Read the [business case](01_business_story.md).
-2. Open the workbook in **desktop Microsoft Excel**.
-3. On `DASHBOARD`, choose **2026**, **All buyers**, **All categories**.
-4. Review PO commitments, receipts, open value, overdue lines and completed-line OTIF.
-5. Open `FOLLOW_UP_QUEUE`, check `Priority`, `Open_Value_NZD`, `Overdue_Days` and `Suggested_Next_Action`.
-6. Use `SUPPLIER_SCORECARD` to distinguish exposure concentration from delivery reliability.
+## Five-minute walkthrough for recruiters and purchasing managers
 
-## Ten-minute technical walkthrough
+1. Start with the [project overview](../README.md), then the [business story](01_business_story.md).
+2. Read the six headline KPIs: commitments, receipts, outstanding value, overdue PO lines, completed-line share and completed-line OTIF.
+3. Review the [supplier scorecard screenshot](../assets/Purchasing_Supplier_Scorecard.png) and [buyer follow-up worklist screenshot](../assets/Purchasing_Follow_Up.png).
+4. Open [business insights and actions](05_insights_and_recommendations.md) to understand why open PO exposure and overdue exceptions require different follow-up.
+5. Check [sources and data provenance](07_sources_and_provenance.md). All business data is synthetic and no operational outcomes are claimed.
 
-1. Identify the PO-line grain of `PO_LINES` and the receipt-event grain of `GOODS_RECEIPTS`.
-2. Find receipt events sharing `PO_Line_ID`; explain why a flat join can duplicate ordered values.
-3. Inspect formulas in `PO_LINES!T:AC`, including open units and line value.
-4. Change dashboard filter cells `B5`, `F5`, and `J5` and observe derived KPIs.
-5. Verify denominator rules in `KPI_DICTIONARY`.
-6. Review `DATA_QA` PASS statuses and discuss the limits of simulated validation.
+## Ten-minute walkthrough for technical reviewers
 
-## What was not built
+1. Open the [technical implementation](02_technical_implementation.md) to understand one PO line versus multiple receipt events.
+2. Examine the formula examples and explain why joining receipts to PO lines without first aggregating them could double-count ordered value.
+3. Use the [KPI dictionary](03_kpi_dictionary.md) to review inclusion rules, timing, units and the completed-line OTIF denominator.
+4. Open the [KPI snapshot CSV](../evidence/2026_kpi_snapshot.csv), [supplier summary](../evidence/2026_supplier_exposure.csv) and [category summary](../evidence/2026_category_exposure.csv).
+5. Check the [eight reported QA outcomes](../evidence/validation_summary.csv) and the [evidence limitations](08_evidence_and_reproducibility.md).
 
-There is no production ERP pipeline, SAP connection, Power BI dashboard or measured commercial improvement. This is a standalone Excel analytics portfolio project.
+## Scope of the publication
+
+This is a **static GitHub case study** with synthetic aggregate numbers, screenshots and calculation explanations. The original line-level Excel workbook is not distributed. The public evidence supports summary consistency checks and a review of analytical reasoning; it does not permit independent transaction-level replay.
+
+No production ERP integration, live purchasing data, independently measured savings or verified operational improvement is claimed.
