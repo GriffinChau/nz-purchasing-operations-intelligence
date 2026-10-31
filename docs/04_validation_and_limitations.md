@@ -19,6 +19,19 @@ The whole included receipt history shows **1,116,418 accepted units** and approx
 
 The workbook inspection found no cached common Excel formula errors. **PASS is internal consistency, not verification against a real ERP.**
 
+## Additional independent source-data checks
+
+A second review of the synthetic PO lines, goods receipts and supplier reference tables found:
+
+- **0** supplier ID mismatches on the linked goods receipt records.
+- **0** goods receipt references without a matching PO-line ID.
+- **0** PO-level accepted quantity discrepancies when summing linked goods receipts.
+- **18** open PO lines (all issue years) with latest recorded ETA before the snapshot, including **17** from the 2026 issue cohort.
+- **1** very old open 2025 PO line, 535 days beyond its original due date.
+- **10** 2026 open lines more than 90 days past original due date.
+
+These are separate from the **eight internal workbook PASS results**. See the [audit CSV](../evidence/data_reliability_review_2026-09-30.csv) and [control methodology](09_data_reliability_and_risk_controls.md). An internal match is not proof of a correct third-party supplier ID.
+
 ## Scope boundaries
 
 - Snapshot as at **30 September 2026**; not a real-time report.
