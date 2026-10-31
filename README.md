@@ -6,15 +6,6 @@
 
 > **Portfolio disclosure:** This is an **independent, simulated project**. All company, buyer, supplier, product, price, purchase order and receipt data are synthetic. The fictional business is **Kauri Industrial Distribution NZ**. All monetary amounts are **NZD excluding GST**.
 
-
-## Real public procurement data: new source pipeline
-
-**New:** [MBIE GETS public-data sourcing and reproducibility](public_data/README.md) | [Python extraction script](scripts/get_gets_public_data.py).
-
-The project now includes an independent pipeline for obtaining **real publicly released New Zealand government procurement award notices and supplier records** from the [MBIE GETS open-data page](https://www.mbie.govt.nz/cross-government-functions/new-zealand-government-procurement-and-property/open-data). The intended output is a separate contract-award analysis, including real agency and supplier names, award counts and disclosed values. **No real-data results are published yet:** automated download attempts from GitHub Actions returned HTTP 403, so no extracted records or statistics are claimed.
-
-**Important distinction:** The purchasing operations dashboard below still uses **synthetic PO-line and goods-receipt records**. It must not be represented as real company procurement data. GETS award notices do not provide goods receipts, supplier ETA history, OTIF or inventory; those original KPIs cannot be converted into real measured results from GETS. This is an independent personal portfolio project, not a commissioned engagement.
-
 **[Business walkthrough](docs/01_business_story.md)** · **[Technical walkthrough](docs/02_technical_implementation.md)** · **[KPI definitions](docs/03_kpi_dictionary.md)** · **[QA & limitations](docs/04_validation_and_limitations.md)**
 
 ## Results at a glance
