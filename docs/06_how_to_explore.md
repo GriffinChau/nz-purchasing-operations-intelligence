@@ -20,6 +20,5 @@ This repository is designed to be understood **without downloading Excel**. It d
 
 ## Scope of the publication
 
-This is a **static GitHub case study** with synthetic aggregate numbers, screenshots and calculation explanations. The original line-level Excel workbook is not distributed. The public evidence supports summary consistency checks and a review of analytical reasoning; it does not permit independent transaction-level replay.
-
+This is a **static GitHub case study** with synthetic aggregate numbers, screenshots and calculation explanations.
 No production ERP integration, live purchasing data, independently measured savings or verified operational improvement is claimed.
