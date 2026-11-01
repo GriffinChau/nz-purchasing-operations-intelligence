@@ -45,5 +45,3 @@ Combined, these make approximately **63%** of the 2026 open value.
 3. Ask supplier to confirm unshipped quantity and credible delivery date.
 4. Inform internal requestor where urgency is confirmed.
 5. Record buyer follow-up and re-evaluate at the next review.
-
-These are **recommended actions**, not completed interventions or verified savings.
