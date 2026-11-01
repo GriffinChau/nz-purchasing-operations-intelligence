@@ -1,7 +1,5 @@
 # Scenario insights and recommended purchasing actions
 
-> **All findings use synthetic data.** Report filter: PO issued in 2026, all buyers and product categories, snapshot **30 September 2026**.
-
 ## 1. Remaining PO commitments
 
 From **NZ$3,293,324** of eligible PO commitments, **NZ$2,740,838** has been received at PO unit prices, leaving **NZ$552,486** open, approximately **16.8%** of committed value.
