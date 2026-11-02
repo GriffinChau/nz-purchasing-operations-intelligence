@@ -6,7 +6,7 @@
 
 > **Portfolio disclosure:** This is an **independent, simulated project**. All company, buyer, supplier, product, price, purchase order and receipt data are synthetic. The fictional business is **Kauri Industrial Distribution NZ**. All monetary amounts are **NZD excluding GST**.
 
-**[Business walkthrough](docs/01_business_story.md)** · **[Technical walkthrough](docs/02_technical_implementation.md)** · **[Excel workbook](workbook/Purchasing_Operations_Dashboard.xlsx)** · **[KPI definitions](docs/03_kpi_dictionary.md)** · **[QA & limitations](docs/04_validation_and_limitations.md)**
+**[Business walkthrough](docs/01_business_story.md)** · **[Technical walkthrough](docs/02_technical_implementation.md)** · **[Excel workbook](workbook/NZ_Purchasing_Operations_Dashboard.xlsx)** · **[KPI definitions](docs/03_kpi_dictionary.md)** · **[QA & limitations](docs/04_validation_and_limitations.md)**
 
 ## Results at a glance
 
@@ -43,7 +43,9 @@ The internal supplier master, PO lines and receipt journal have **zero observed 
 
 **Supplier performance:** Where is outstanding value concentrated, and which supplier relationships deserve a closer review?
 
-![Supplier performance scorecard - synthetic scenario](assets/Purchasing_Supplier_Scorecard.png)
+![Supplier performance scorecard - synthetic scenario, earlier screenshot](assets/Purchasing_Supplier_Scorecard.png)
+
+*Screenshot note:* This image is an earlier illustrative view. The published Excel workbook now uses a revised, multi-factor **Action** rule based on overdue lines, open value and completed-line OTIF; review `SUPPLIER_SCORECARD` in Excel for current HIGH/REVIEW/MONITOR labels. The underlying synthetic amounts and KPIs have not changed.
 
 **Purchasing action queue:** Which purchase-order lines need a buyer follow-up?
 
@@ -57,7 +59,7 @@ The internal supplier master, PO lines and receipt journal have **zero observed 
 | **Technical reviewer** | [Calculation and reconciliation evidence](docs/08_evidence_and_reproducibility.md), then [Excel modelling details](docs/02_technical_implementation.md) |
 | **Data reviewer** | [Aggregated CSV tables](evidence/2026_kpi_snapshot.csv) and [validation log](docs/04_validation_and_limitations.md) |
 
-**Evidence availability:** The [synthetic Excel workbook](workbook/Purchasing_Operations_Dashboard.xlsx) is published in this repository. Reviewers can inspect its PO lines, receipts, formulas and `DATA_QA` tab; opening Excel is optional because aggregate CSVs and walkthroughs are also provided. Internal `PASS` results are not an external audit, and CSV summaries alone cannot reproduce transaction-level calculations.
+**Evidence availability:** The [synthetic Excel workbook](workbook/NZ_Purchasing_Operations_Dashboard.xlsx) is published in this repository. Reviewers can inspect its PO lines, receipts, formulas and `DATA_QA` tab; opening Excel is optional because aggregate CSVs and walkthroughs are also provided. Internal `PASS` results are not an external audit, and CSV summaries alone cannot reproduce transaction-level calculations.
 
 
 ## The business problem
@@ -78,7 +80,7 @@ The project asks a practical question:
 | `CATEGORY_SPEND` | Purchasing / Category Lead | Which product categories account for the most purchasing commitments and remaining exposure? (`SPEND` is a legacy sheet name, not invoice-paid spend.) |
 | `DATA_QA` | Analyst / reviewer | Can the computed figures be reconciled to receipt and PO records? |
 
-The Excel prototype was built from PO-line and goods-receipt records with supplier, product and buyer reference tables. **It is a formula-based Excel case study, not a Power BI or SQL project.** The [synthetic transaction-level workbook](workbook/Purchasing_Operations_Dashboard.xlsx) is available alongside aggregated CSV summaries, screenshots, formula descriptions and recorded internal validation results.
+The Excel prototype was built from PO-line and goods-receipt records with supplier, product and buyer reference tables. **It is a formula-based Excel case study, not a Power BI or SQL project.** The [synthetic transaction-level workbook](workbook/NZ_Purchasing_Operations_Dashboard.xlsx) is available alongside aggregated CSV summaries, screenshots, formula descriptions and recorded internal validation results.
 
 ## Snapshot: what the synthetic data tells us
 
@@ -110,7 +112,7 @@ Start with **[The business story](docs/01_business_story.md)**. It explains the 
 
 ## For technical readers
 
-Start with **[Technical implementation](docs/02_technical_implementation.md)** to see the one-PO-line-to-many-receipts relationship, grains, calculated fields, filter rules and Excel logic. Continue to **[KPI definitions](docs/03_kpi_dictionary.md)** and **[validation](docs/04_validation_and_limitations.md)**. The [evidence page](docs/08_evidence_and_reproducibility.md) and static [CSV summaries](evidence/2026_kpi_snapshot.csv) make the reported aggregates inspectable without Excel. The [synthetic line-level workbook](workbook/Purchasing_Operations_Dashboard.xlsx) is publicly included; see the [workbook review instructions](workbook/README.md). Aggregate CSVs alone cannot support line-by-line recomputation, and neither the workbook nor the recorded internal checks constitute an independent audit of real-world supplier data.
+Start with **[Technical implementation](docs/02_technical_implementation.md)** to see the one-PO-line-to-many-receipts relationship, grains, calculated fields, filter rules and Excel logic. Continue to **[KPI definitions](docs/03_kpi_dictionary.md)** and **[validation](docs/04_validation_and_limitations.md)**. The [evidence page](docs/08_evidence_and_reproducibility.md) and static [CSV summaries](evidence/2026_kpi_snapshot.csv) make the reported aggregates inspectable without Excel. The [synthetic line-level workbook](workbook/NZ_Purchasing_Operations_Dashboard.xlsx) is publicly included; see the [workbook review instructions](workbook/README.md). Aggregate CSVs alone cannot support line-by-line recomputation, and neither the workbook nor the recorded internal checks constitute an independent audit of real-world supplier data.
 
 ```mermaid
 flowchart LR
@@ -125,7 +127,7 @@ flowchart LR
 
 ## Public evidence scope
 
-This repository is a **readable case study** that does not require an Excel download. See the [evidence and calculation notes](docs/08_evidence_and_reproducibility.md), [KPI CSV](evidence/2026_kpi_snapshot.csv), [supplier breakdown](evidence/2026_supplier_exposure.csv) and [validation summary](evidence/validation_summary.csv). For transaction-level exploration, download the [synthetic Excel workbook](workbook/Purchasing_Operations_Dashboard.xlsx) and follow its [review instructions](workbook/README.md). Public CSV summaries verify aggregate arithmetic, but do not independently prove source-record accuracy.
+This repository is a **readable case study** that does not require an Excel download. See the [evidence and calculation notes](docs/08_evidence_and_reproducibility.md), [KPI CSV](evidence/2026_kpi_snapshot.csv), [supplier breakdown](evidence/2026_supplier_exposure.csv) and [validation summary](evidence/validation_summary.csv). For transaction-level exploration, download the [synthetic Excel workbook](workbook/NZ_Purchasing_Operations_Dashboard.xlsx) and follow its [review instructions](workbook/README.md). Public CSV summaries verify aggregate arithmetic, but do not independently prove source-record accuracy.
 
 
 ## Technical scope and honesty
