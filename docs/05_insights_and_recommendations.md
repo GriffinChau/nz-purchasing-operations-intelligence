@@ -32,6 +32,12 @@ Combined, these make approximately **63%** of the 2026 open value.
 
 **Reading the chart:** The three named suppliers account for about 62.7% of open PO value in the 2026 cohort. "All other suppliers" combines remaining exposure; this aggregation does not imply the named suppliers have poor delivery performance. Follow up on due dates and individual PO lines before escalation.
 
+### Revised supplier Action triage in the Excel workbook
+
+The latest published workbook combines overdue lines, outstanding NZD and completed-line OTIF in its illustrative HIGH / REVIEW / MONITOR flags. For example, **HIGH** applies at 5+ overdue lines, or a combination of 1+ overdue line and NZ$100k+ open value, or a combination of overdue exposure and OTIF below 75% across 5+ completed lines. **REVIEW** includes any remaining supplier with overdue lines or NZ$50k+ open value. See the full [ordered rules](03_kpi_dictionary.md#supplier-scorecard-action--illustrative-triage-not-a-vendor-rating).
+
+These labels indicate *buyer attention*, not supplier fault or a production-approved SLA. The static [supplier screenshot](../assets/Purchasing_Supplier_Scorecard.png) predates this rule change; open the [latest workbook](../workbook/NZ_Purchasing_Operations_Dashboard.xlsx) to view current Action labels.
+
 ## 4. Completed-line OTIF needs context
 
 **88.0%** completed-line OTIF is calculated only for fully received lines; **19** open lines are overdue and the overall completion rate is **80.1%**.
