@@ -2,7 +2,7 @@
 
 ## Reconciliation controls
 
-Eight controls in the published synthetic workbook's `DATA_QA` sheet were **recorded as PASS**. The reviewed version includes a stratified 20-PO-line reconciliation sample spanning 2024–2026 (including open, partial, cancelled and multi-receipt cases) and uses absolute differences so positive and negative discrepancies cannot cancel:
+Eight controls in the published synthetic workbook's `DATA_QA` sheet were **recorded as PASS**. The workbook includes a stratified 20-PO-line reconciliation sample spanning 2024–2026 (including open, partial, cancelled and multi-receipt cases) and uses absolute differences so positive and negative discrepancies cannot cancel:
 
 | Control | Result |
 |---|---|
@@ -17,7 +17,7 @@ Eight controls in the published synthetic workbook's `DATA_QA` sheet were **reco
 
 The whole included receipt history shows **1,116,418 accepted units** and approximately **NZ$11,498,958 receipt value**. These are all-year figures and should not be confused with the filtered 2026 dashboard cohort.
 
-The workbook inspection found no cached common Excel formula errors. The `DATA_QA!D6:D13` status cells use genuine **Excel formulas**, including shared formulas referencing expected/calculated inputs; they are not seven manually typed `PASS` cells. The revised sample and receipt-overrun check are present in the downloadable workbook. **PASS is internal consistency, not verification against a real ERP.**
+The workbook inspection found no cached common Excel formula errors. The `DATA_QA!D6:D13` status cells use genuine **Excel formulas**, including shared formulas referencing expected/calculated inputs; they are not seven manually typed `PASS` cells. The sample and receipt-overrun check are included in the workbook. **PASS is internal consistency, not verification against a real ERP.**
 
 ## Additional independent source-data checks
 
