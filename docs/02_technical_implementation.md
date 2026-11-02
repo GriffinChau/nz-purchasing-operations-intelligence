@@ -26,7 +26,7 @@ The relationships above are **logical**, not enforced database constraints.
 
 ## Avoiding duplicated commitments
 
-A line may be received in several deliveries. Directly joining `PO_LINES` to `GOODS_RECEIPTS` and summing `Ordered_Units` would count a PO-line order more than once. The workbook aggregates receipt quantity to the PO line and retains a separate receipt journal.
+A line may be received in several deliveries. Directly joining `PO_LINES` to `GOODS_RECEIPTS` and summing `Ordered_Units` would count a PO-line order more than once. The workbook retains a separate receipt journal and uses PO-line-level quantities to prevent duplicated commitments. **Implementation boundary:** the included PO-line `Received_Units` (column `R`) and `Last_GR_Date` (column `S`) are fixed values in this snapshot, not live formulas driven by newly appended goods-receipt rows. The analytical formula fields `T:V` depend on those source values, while `W:AC` contain snapshot status and performance flags. Appending goods receipts alone will **not** automatically refresh all source fields, flags or dashboards. Treat this as a fixed 30 September 2026 case study, not an incremental-refresh operational tool.
 
 ### Selected Excel formulas
 
@@ -56,7 +56,7 @@ The dashboard uses `SUMIFS` and `COUNTIFS` over line-level derived fields. User 
 
 - Main dashboard and supplier scorecard follow dashboard filter choices.
 - Category analysis maintains an all-category comparison. The sheet is named `CATEGORY_SPEND`, but its values are PO commitments/open exposure **not invoice-paid spend**.
-- Follow-up queue covers **all PO issue years** and is filtered independently as an Excel table.
+- Follow-up queue covers **all PO issue years** and is filtered independently as an Excel table. It is a **static 33-line exception snapshot** assembled for the cutoff date, not a live formula-generated queue. Rebuild or revalidate the queue after any transaction data refresh.
 - **PO issue year** is not the same as receipt posting year.
 
 ## Delivery logic
