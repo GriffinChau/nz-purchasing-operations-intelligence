@@ -18,12 +18,12 @@ Download [Purchasing_Operations_Dashboard.xlsx](Purchasing_Operations_Dashboard.
 
 1. Start on `DASHBOARD`; set PO issue year to **2026**, buyer to **All**, and category to **All** (selector cells `B5`, `F5` and `J5`). Compare headline values to the [published KPI CSV](../evidence/2026_kpi_snapshot.csv).
 2. Check `PO_LINES` and `GOODS_RECEIPTS`: the grain is one PO line vs. one receipt event; multiple receipts may belong to a single PO line. Do not duplicate ordered value through a direct one-to-many join.
-3. Open `SUPPLIER_SCORECARD` for open commitments, then `FOLLOW_UP_QUEUE` for buyer actions. The follow-up queue covers **all PO issue years** and is filtered independently of the dashboard.
+3. Open `SUPPLIER_SCORECARD` for open commitments, then `FOLLOW_UP_QUEUE` for buyer actions. The follow-up queue contains **33 static exception rows across all PO issue years** and is filtered independently of the dashboard. It does **not** automatically regenerate when new goods receipts are appended.
 4. Open `CATEGORY_SPEND` for **category commitments and outstanding value**. Its sheet name does **not** mean actual invoices paid; such data is absent.
-5. Review `DATA_QA` and compare its eight *recorded* control outcomes with the [QA summary](../evidence/validation_summary.csv). These are internal synthetic-data checks; this documentation review has not independently re-executed them.
+5. Review `DATA_QA` and compare its eight *recorded* control outcomes with the [QA summary](../evidence/validation_summary.csv). **Important:** the status cells are genuine Excel *shared formulas*, not seven hard-coded `PASS` values. These are internal synthetic-data checks; this public GitHub release has not been externally audited.
 6. Read the [KPI dictionary](../docs/03_kpi_dictionary.md) and [evidence notes](../docs/08_evidence_and_reproducibility.md) for formula scope and limitations.
 
-The workbook's transaction-level data is **synthetic**, not sourced from a real business. The eight recorded QA checks and additional checks reflect internal consistency rather than an independent audit or deployment.
+The workbook's transaction-level data is **synthetic**, not sourced from a real business. The eight recorded QA checks and additional checks reflect internal consistency rather than an independent audit or deployment. The PO-line receipt quantity, final-receipt date and delivery-status flags are **snapshot fields**: adding records to `GOODS_RECEIPTS` alone is not a complete refresh process.
 
 For reviewers who prefer not to download the file, the main [project README](../README.md) contains KPI results, charts and business interpretation, while [evidence notes](../docs/08_evidence_and_reproducibility.md) provide calculation definitions and data limitations.
 
