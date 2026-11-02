@@ -29,4 +29,4 @@ External EDI trading-partner messages, legal identifiers and system mappings are
 
 ## Reproducibility
 
-The original Excel prototype contains transaction-level data and formula-based internal checks but is not publicly distributed. Publicly available evidence consists of [aggregated CSV files](../evidence/2026_kpi_snapshot.csv), [technical documentation](02_technical_implementation.md), and [reported validation results](08_evidence_and_reproducibility.md). These do not enable independent row-level reproduction.
+The [synthetic Excel prototype](../workbook/Purchasing_Operations_Dashboard.xlsx) **is publicly included** and contains transaction-level data and formula-based internal checks. It can be inspected alongside [aggregated CSV files](../evidence/2026_kpi_snapshot.csv), [technical documentation](02_technical_implementation.md), and [reported validation results](08_evidence_and_reproducibility.md). CSV summaries alone cannot reproduce row-level calculations; the workbook supports source-row and formula review but does **not** provide independent verification against actual supplier, ERP or EDI records.
