@@ -41,4 +41,4 @@ Purchasing staff often need to reconcile orders with multiple goods receipts whi
 - Supplier performance is contextualised alongside open and overdue backlog.
 - Data limitations and synthetic assumptions are prominent.
 
-**Outcome:** An Excel-based purchasing decision-support *prototype*, presented on GitHub using public summary evidence, screenshots and documentation. The transaction-level workbook is not distributed and no measured real-world operational improvements are claimed.
+**Outcome:** An Excel-based purchasing decision-support *prototype*, presented on GitHub using a [public synthetic workbook](../workbook/Purchasing_Operations_Dashboard.xlsx), summary evidence, screenshots and documentation. It is not a real ERP deployment; no measured real-world operational improvements are claimed.
