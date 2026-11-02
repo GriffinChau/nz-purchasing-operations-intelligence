@@ -88,9 +88,9 @@ See the [technical implementation](02_technical_implementation.md) and [KPI dict
 
 Eight checks were recorded as **PASS** in the original workbook's `DATA_QA` tab. They cover unit/value reconciliation, population counts, cancellation exclusions, a time cutoff, sampled allocations and OTIF eligibility. Full list: [validation summary CSV](../evidence/validation_summary.csv).
 
-**Limitations of this evidence:** These are *recorded* outcomes of a synthetic workbook's internal checks, not validations independently rerun for this documentation review. The [published workbook](../workbook/NZ_Purchasing_Operations_Dashboard.xlsx) contains transaction-level source rows and formulas that a reviewer can inspect; the aggregate CSVs on their own cannot recreate those rows. No separate automated row-level verification script or independent ERP/EDI source exists here. A reported PASS cannot establish that every synthetic source record or external supplier identity is correct.
+**Limitations of this evidence:** These are *recorded* outcomes of a synthetic workbook's internal checks, not an independent external audit. The [published workbook](../workbook/NZ_Purchasing_Operations_Dashboard.xlsx) contains transaction-level source rows and formulas that a reviewer can inspect; the aggregate CSVs on their own cannot recreate those rows. No separate automated row-level verification script or independent ERP/EDI source exists here. A reported PASS cannot establish that every synthetic source record or external supplier identity is correct.
 
-### Published workbook revision
+### Workbook QA and supplier triage
 
 The current [synthetic Excel workbook](../workbook/NZ_Purchasing_Operations_Dashboard.xlsx) includes revised supplier triage and a broader, stratified 20-line QA allocation sample spanning 2024–2026. The underlying synthetic PO and receipt records, the fixed 30 September 2026 cutoff and the headline KPI results were not changed. Internal recorded PASS outcomes and the aggregate CSV summaries are not an external audit. The historical supplier-scorecard PNG may show the earlier Action labels.
 
