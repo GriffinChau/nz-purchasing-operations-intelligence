@@ -32,6 +32,19 @@ For the simulated **2026 PO issue-year** cohort, **206 of 234** eligible complet
 
 The follow-up worklist contains illustrative priorities: P1 for lines **at least 30 days overdue**, or **at least 10 days overdue and NZ$12k+ open**; P2 for other overdue lines; P3 for due-soon lines. These are **illustrative thresholds**, not a company's approved SLA.
 
+## Supplier scorecard Action — illustrative triage, not a vendor rating
+
+The updated Excel workbook's `SUPPLIER_SCORECARD!L7:L20` assigns **HIGH / REVIEW / MONITOR** to guide buyer attention using overdue lines, open PO value and completed-line OTIF. It is **not** a measured overall supplier reliability score, approved supplier SLA or evidence of misconduct.
+
+The following rules are evaluated in order for each supplier within the selected dashboard cohort:
+
+1. **NO PO** when the selected cohort contains no eligible PO lines; **MONITOR** when open PO value is zero.
+2. **HIGH** when **at least 5 overdue open lines**, or **at least 1 overdue line and NZ$100,000+ open value**, or **at least 1 overdue line, at least 5 completed lines and completed-line OTIF below 75%**.
+3. Otherwise **REVIEW** when **at least 1 overdue line**, or **NZ$50,000+ open value**, or **at least 1 overdue line, at least 5 completed lines and completed-line OTIF below 85%**.
+4. Otherwise **MONITOR**.
+
+These thresholds are **portfolio assumptions**. HIGH is evaluated before REVIEW. The rule is a *review queue* that must be interpreted together with actual overdue dates, quantities, ETA confirmation and internal urgency; it should not be used to penalise suppliers based only on synthetic completed-line OTIF. The [scorecard screenshot](../assets/Purchasing_Supplier_Scorecard.png) predates the revised rule; use the Excel workbook for the latest labels.
+
 ## Naming note: `CATEGORY_SPEND`
 
 The workbook's `CATEGORY_SPEND` tab is a legacy label. It shows **PO commitment and open value by category**, not invoice-paid procurement spend. The tab name is retained to avoid silently altering workbook references; rename only after workbook-wide reference checks in a future revision.
