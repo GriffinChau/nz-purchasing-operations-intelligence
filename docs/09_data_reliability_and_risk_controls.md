@@ -1,6 +1,6 @@
 # Data reliability, supplier identity and ETA controls
 
-> **Portfolio-specific audit:** These findings were recomputed from the synthetic `Purchasing_Operations_Dashboard.xlsx` source file as at **30 September 2026**. They refer to the scenario only. The public repository includes aggregate evidence, but not an independent supplier ERP feed or transaction-level audit export.
+> **Portfolio-specific audit:** These findings were recomputed from the synthetic `Purchasing_Operations_Dashboard.xlsx` source file as at **30 September 2026**. They refer to the scenario only. The repository now includes the [synthetic transaction-level Excel workbook](../workbook/Purchasing_Operations_Dashboard.xlsx) alongside aggregate evidence. This is **not** an independent supplier ERP feed, EDI record or externally audited export.
 
 ## What does "reliable supplier data" mean here?
 
