@@ -1,6 +1,6 @@
 # Evidence, metric logic and reproducibility
 
-This is a **static, no-download-required evidence page** for an **independent, synthetic** Excel purchasing analytics project. It shows published aggregate results and methodology rather than requiring a reviewer to open the workbook. It is designed for *explainability*, not independent audit of every simulated transaction.
+This is a **static, no-download-required evidence page** for an **independent, synthetic** Excel purchasing analytics project. It shows published aggregate results and methodology rather than requiring a reviewer to open the workbook. It is designed for *explainability*, not an independent audit of every simulated transaction.
 
 ## 1. Evidence scope
 
@@ -9,6 +9,7 @@ This is a **static, no-download-required evidence page** for an **independent, s
 - **Monetary basis:** NZD excluding GST, valued at PO unit prices (not supplier invoice / cash paid).
 - **Input scenario:** Fictional NZ industrial distributor, 14 suppliers, 95 SKUs, 5 buyers; 2024-2026 dataset with **1,159 PO lines and 1,394 receipt events**.
 - **Follow-up worklist:** All issue years, separately filtered from main 2026 dashboard.
+- **Published implementation:** [Synthetic Excel workbook](../workbook/Purchasing_Operations_Dashboard.xlsx), with [review instructions](../workbook/README.md). Excel is optional for this summary, but supports transaction-level inspection.
 
 ## 2. KPI snapshot evidence
 
@@ -87,7 +88,7 @@ See the [technical implementation](02_technical_implementation.md) and [KPI dict
 
 Eight checks were recorded as **PASS** in the original workbook's `DATA_QA` tab. They cover unit/value reconciliation, population counts, cancellation exclusions, a time cutoff, sampled allocations and OTIF eligibility. Full list: [validation summary CSV](../evidence/validation_summary.csv).
 
-**Limitations of this evidence:** These are reported outcomes of a synthetic workbook's internal checks, not independently rerun validations against the underlying line-level dataset. A public static summary cannot prove every transaction was correct. For fully reproducible audit-level verification, a transaction-level synthetic dataset and a runnable verification script would be needed. Those are not published in this repository.
+**Limitations of this evidence:** These are *recorded* outcomes of a synthetic workbook's internal checks, not validations independently rerun for this documentation review. The [published workbook](../workbook/Purchasing_Operations_Dashboard.xlsx) contains transaction-level source rows and formulas that a reviewer can inspect; the aggregate CSVs on their own cannot recreate those rows. No separate automated row-level verification script or independent ERP/EDI source exists here. A reported PASS cannot establish that every synthetic source record or external supplier identity is correct.
 
 ## 6. What is not claimed
 
