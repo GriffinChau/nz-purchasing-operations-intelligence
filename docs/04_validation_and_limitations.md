@@ -17,7 +17,7 @@ Eight controls in the published synthetic workbook's `DATA_QA` sheet were **reco
 
 The whole included receipt history shows **1,116,418 accepted units** and approximately **NZ$11,498,958 receipt value**. These are all-year figures and should not be confused with the filtered 2026 dashboard cohort.
 
-The workbook inspection found no cached common Excel formula errors. **PASS is internal consistency, not verification against a real ERP.**
+The workbook inspection found no cached common Excel formula errors. The original `DATA_QA!D6:D13` status cells use a genuine **shared Excel formula** referencing their expected/calculated inputs; they are not seven manually typed `PASS` cells. **PASS is internal consistency, not verification against a real ERP.**
 
 ## Additional independent source-data checks
 
@@ -36,7 +36,7 @@ These are separate from the **eight internal workbook PASS results**. See the [a
 
 - Snapshot as at **30 September 2026**; not a real-time report.
 - Dashboard uses **PO issue year**, not receipt year.
-- Follow-up queue operates on **all years** and is independent of dashboard filters.
+- Follow-up queue operates on **all years** and is independent of dashboard filters. Its 33 displayed exception records are **static at the cutoff date**, not automatically recalculated from newly entered GR events.
 - Completed-line OTIF excludes open overdue items; review it with open and overdue counts.
 - Value reflects PO unit prices, excludes tax, freight, supplier invoices, FX conversion and landed costs.
 - Some older simulated worklist exceptions may need cleanup in a real operational dataset.
