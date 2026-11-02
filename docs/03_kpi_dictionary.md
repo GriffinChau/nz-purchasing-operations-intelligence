@@ -32,6 +32,10 @@ For the simulated **2026 PO issue-year** cohort, **206 of 234** eligible complet
 
 The follow-up worklist contains illustrative priorities: P1 for lines **at least 30 days overdue**, or **at least 10 days overdue and NZ$12k+ open**; P2 for other overdue lines; P3 for due-soon lines. These are **illustrative thresholds**, not a company's approved SLA.
 
+## Naming note: `CATEGORY_SPEND`
+
+The workbook's `CATEGORY_SPEND` tab is a legacy label. It shows **PO commitment and open value by category**, not invoice-paid procurement spend. The tab name is retained to avoid silently altering workbook references; rename only after workbook-wide reference checks in a future revision.
+
 ## Excluded metrics
 
 The data cannot establish paid procurement spend, realised purchase-price savings, stockouts, lost sales, actual fill rate, stock turnover, landed cost or supplier defect rate. These are intentionally not presented as measured outcomes.
