@@ -2,7 +2,7 @@
 
 ## Reconciliation controls
 
-Eight controls in the submitted workbook's `DATA_QA` sheet displayed **PASS**:
+Eight controls in the published synthetic workbook's `DATA_QA` sheet were **recorded as PASS**:
 
 | Control | Result |
 |---|---|
@@ -43,7 +43,7 @@ These are separate from the **eight internal workbook PASS results**. See the [a
 
 ## Verification boundary
 
-The workbook used to generate these figures is not published in the repository. Eight recorded `PASS` results describe internal controls, not a third-party audit or independently reproducible transaction-level validation. The public CSV files provide aggregate numerical evidence only.
+The [synthetic source workbook](../workbook/Purchasing_Operations_Dashboard.xlsx) **is published** in this repository. Reviewers can inspect source rows, formulas and `DATA_QA` checks in Excel, using the [review guide](../workbook/README.md). The eight reported `PASS` outcomes have **not been independently re-executed for this documentation update** and do not amount to a third-party audit. The public CSV summaries alone provide aggregate numerical evidence, not a row-level verification.
 
 
 ## Source limitations
