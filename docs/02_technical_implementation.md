@@ -2,7 +2,7 @@
 
 ## Architecture and grain
 
-This is an **Excel-based analytical prototype**. No SQL, Power BI or live SAP/ERP integration is claimed. The [synthetic workbook](../workbook/Purchasing_Operations_Dashboard.xlsx) is included in the repository, with [review steps](../workbook/README.md).
+This is an **Excel-based analytical prototype**. No SQL, Power BI or live SAP/ERP integration is claimed. The [synthetic workbook](../workbook/NZ_Purchasing_Operations_Dashboard.xlsx) is included in the repository, with [review steps](../workbook/README.md).
 
 | Sheet | Grain | Purpose |
 |---|---|---|
